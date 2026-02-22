@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Godawari English Boarding School</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 align="center">Godawari English Boarding School</h1>
+        <h3 align="center">Biratnagar-13, Nepal</h3>
+
+        <marquee behavior="scroll" direction="left" scrollamount="6" style="font-size:18px; color:skyblue;" align="center">
+            Welcome to Godawari English Boarding School! Nurturing young minds for a brighter future!
+        </marquee>
+
+        <hr>
+    </header>
+
+    <!-- Main Table Layout: Two Columns -->
+    <table border="0" width="100%" cellpadding="10" cellspacing="10">
+        <tr>
+            <!-- Left Column: About + News -->
+            <td valign="top" width="50%">
+                <table border="1" width="100%" cellpadding="10" id="about">
+                    <tr bgcolor="#green ">
+                        <th align="center">About Our School</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Godawari English Boarding School is dedicated to nurturing young minds in Biratnagar-13. 
+                            We focus on academic excellence, extracurricular activities, and holistic development.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+                <!-- News & Events Section -->
+                <table border="1" width="100%" cellpadding="10" id="news">
+                    <tr bgcolor="#green">
+                        <th align="center">News & Events</th>
+                    </tr>
+                    <tr>
+                        <td id="eventList">
+                            <ul>
+                                <li>March 15, 2026 – Science Fair</li>
+                                <li>April 10, 2026 – Sports Day</li>
+                                <li>May 5, 2026 – Art Exhibition</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- Right Column: Staff + Contact + Gallery -->
+            <td valign="top" width="50%">
+                <table border="1" width="100%" cellpadding="10" id="staff">
+                    <tr bgcolor="#green">
+                        <th colspan="2" align="center">Our Staff</th>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                    </tr>
+                    <tr>
+                        <td>Mr. Keshar Karki</td>
+                        <td>Principal</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Rabin Shah</td>
+                        <td>Math Teacher</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Pashupati Shah</td>
+                        <td>Science Teacher</td>
+                    </tr>
+                </table>
+                <br>
+
+                <table border="1" width="100%" cellpadding="10" id="contact">
+                    <tr bgcolor="#green">
+                        <th align="center">Contact Us</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email: info@godawariesbs.edu.np<br>
+                            Phone: +977 981-4389265<br>
+                            Address: Biratnagar-13, Nepal
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+                <table border="1" width="100%" cellpadding="10" id="gallery">
+                    <tr bgcolor="#green">
+                        <th colspan="2" align="center">Photo Gallery</th>
+                    </tr>
+                    <tr>
+                        <td align="center"><img src="school1.jpg" alt="School Building" width="150"></td>
+                        <td align="center"><img src="school2.jpg" alt="Classroom" width="150"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><img src="event1.jpg" alt="Event" width="150"></td>
+                        <td align="center"><img src="event2.jpg" alt="Sports Day" width="150"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- Admission Form -->
+    <table border="1" width="100%" cellpadding="10">
+        <tr bgcolor="skyblue">
+            <th colspan="2" align="center">Admission Form (Send via WhatsApp)</th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <form id="whatsappForm">
+                    Full Name:<br>
+                    <input type="text" id="student_name" required><br><br>
+
+                    Date of Birth:<br>
+                    <input type="date" id="dob" required><br><br>
+
+                    Gender:<br>
+                    <input type="radio" name="gender" id="male" value="Male" required> Male
+                    <input type="radio" name="gender" id="female" value="Female"> Female
+                    <input type="radio" name="gender" id="other" value="Other"> Other<br><br>
+
+                    Class Applying For:<br>
+                    <select id="class_applied" required>
+                        <option value="">Select Class</option>
+                        <option value="Nursery">Nursery</option>
+                        <option value="KG">KG</option>
+                        <option value="Grade 1">Grade 1</option>
+                        <option value="Grade 2">Grade 2</option>
+                        <option value="Grade 3">Grade 3</option>
+                        <option value="Grade 4">Grade 4</option>
+                        <option value="Grade 5">Grade 5</option>
+                        <option value="Grade 6">Grade 6</option>
+                        <option value="Grade 7">Grade 7</option>
+                        <option value="Grade 8">Grade 8</option>
+                        <option value="Grade 9">Grade 9</option>
+                        <option value="Grade 10">Grade 10</option>
+                    </select><br><br>
+
+                    Parent Name:<br>
+                    <input type="text" id="parent_name" required><br><br>
+
+                    Contact Number:<br>
+                    <input type="tel" id="contact_number" required><br><br>
+
+                    <input type="button" value="Send via WhatsApp" onclick="sendWhatsApp()">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- Button to Access Admin Panel -->
+    <div align="center">
+        <button onclick="showAdminPanel()">Access Admin Panel</button>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" style="display:none; margin-top:20px;">
+        <h2 align="center">Admin Panel (Preview Only)</h2>
+        <hr>
+
+        <!-- Upload Gallery -->
+        <h3>Upload Gallery Photos</h3>
+        <input type="file" id="galleryUpload" multiple accept="image/*">
+        <button onclick="uploadGallery()">Upload to Gallery</button>
+        <br><br>
+
+        <!-- Post Event -->
+        <h3>Post New Event</h3>
+        Event Title:<br>
+        <input type="text" id="eventTitle" style="width:50%;" placeholder="Enter event title"><br><br>
+        Event Date:<br>
+        <input type="date" id="eventDate"><br><br>
+        Description:<br>
+        <textarea id="eventDesc" rows="4" cols="50" placeholder="Enter event description"></textarea><br><br>
+        <button onclick="postEvent()">Post Event</button>
+    </div>
+
+    <hr>
+
+    <!-- Scripts -->
+    <script>
+        // WhatsApp Admission Form
+        function sendWhatsApp() {
+            var name = document.getElementById('student_name').value;
+            var dob = document.getElementById('dob').value;
+            var gender = document.querySelector('input[name="gender"]:checked')?.value;
+            var classApplied = document.getElementById('class_applied').value;
+            var parent = document.getElementById('parent_name').value;
+            var contact = document.getElementById('contact_number').value;
+
+            var message = 
+                "Admission Form Submission:%0A" +
+                "Student Name: " + name + "%0A" +
+                "DOB: " + dob + "%0A" +
+                "Gender: " + gender + "%0A" +
+                "Class: " + classApplied + "%0A" +
+                "Parent Name: " + parent + "%0A" +
+                "Contact: " + contact;
+
+            var whatsappNumber = "9767797783"; // Replace with school WhatsApp number
+            var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+            window.open(url, "_blank");
+        }
+
+        // Admin Panel Password
+        function showAdminPanel() {
+            var password = prompt("Enter admin password:");
+            if(password === "nicolus123") {
+                document.getElementById("adminPanel").style.display = "block";
+                alert("Welcome Admin!");
+            } else {
+                alert("Wrong password!");
+            }
+        }
+
+        // Upload gallery images dynamically
+        function uploadGallery() {
+            var files = document.getElementById('galleryUpload').files;
+            if(files.length === 0){ alert("Select at least one image."); return; }
+
+            var gallery = document.getElementById('gallery');
+            for(var i=0; i<files.length; i++){
+                var reader = new FileReader();
+                reader.onload = function(e){
+                    var newRow = gallery.insertRow(-1);
+                    var newCell = newRow.insertCell(0);
+                    newCell.colSpan = 2;
+                    var img = document.createElement("img");
+                    img.src = e.target.result;
+                    img.width = 150;
+                    img.style.border = "1px solid #333";
+                    newCell.appendChild(img);
+                };
+                reader.readAsDataURL(files[i]);
+            }
+            alert("Images added to gallery!");
+        }
+
+        // Post event dynamically
+        function postEvent() {
+            var title = document.getElementById('eventTitle').value;
+            var date = document.getElementById('eventDate').value;
+            var desc = document.getElementById('eventDesc').value;
+
+            if(!title || !date || !desc){ alert("Fill all fields!"); return; }
+
+            var ul = document.getElementById('eventList').getElementsByTagName('ul')[0];
+            var li = document.createElement("li");
+            li.innerHTML = date + " – " + title + ": " + desc;
+            ul.appendChild(li);
+
+            // Clear fields
+            document.getElementById('eventTitle').value = "";
+            document.getElementById('eventDate').value = "";
+            document.getElementById('eventDesc').value = "";
+
+            alert("Event added!");
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <p align="center">&copy; 2026 Godawari English Boarding School. All rights reserved.</p>
+    </footer>
+</body>
+</html>
